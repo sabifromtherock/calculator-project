@@ -7,38 +7,40 @@
     <title>Calculator</title>
   </head>
   <body>
-    <header>
-      <h2 class="header__title">TypeScript Calculator</h2>
-    </header>
-    <section>
-      <p class="display">_</p>
-    </section>
-    <section class="buttons">
-      <button class="buttons--grey">C</button>
-      <button class="buttons--grey">&#177;</button>
-      <button class="buttons--grey">%</button>
+    <div class="calculator-container">
+      <header>
+        <h2 class="header__title">TypeScript Calculator</h2>
+      </header>
+      <section class="display">
+        <p class="display__row--first"></p>
+        <p class="display__row--second"></p>
+      </section>
+      <section class="buttons">
+        <button class="buttons__button--grey" value="C">C</button>
+        <button class="buttons__button--grey" value="+/-">+/-</button>
+        <button class="buttons__button--grey" value="%">%</button>
+        <button class="buttons__button--orange" value="/">/</button>
 
-      <button class="buttons--orange">÷</button>
-      <button class="buttons--orange">x</button>
-      <button class="buttons--orange">-</button>
-      <button class="buttons--orange">+</button>
-      <button class="buttons--orange">=</button>
+        <button class="buttons__button--black" value="7">7</button>
+        <button class="buttons__button--black" value="8">8</button>
+        <button class="buttons__button--black" value="9">9</button>
+        <button class="buttons__button--orange" value="x">x</button>
 
-      <button class="buttons--black">7</button>
-      <button class="buttons--black">8</button>
-      <button class="buttons--black">9</button>
+        <button class="buttons__button--black" value="4">4</button>
+        <button class="buttons__button--black" value="5">5</button>
+        <button class="buttons__button--black" value="6">6</button>
+        <button class="buttons__button--orange" value="-">-</button>
 
-      <button class="buttons--black">4</button>
-      <button class="buttons--black">5</button>
-      <button class="buttons--black">6</button>
+        <button class="buttons__button--black" value="1">1</button>
+        <button class="buttons__button--black" value="2">2</button>
+        <button class="buttons__button--black" value="3">3</button>
+        <button class="buttons__button--orange" value="+">+</button>
 
-      <button class="buttons--black">1</button>
-      <button class="buttons--black">2</button>
-      <button class="buttons--black">3</button>
-
-      <button class="buttons--black">0</button>
-      <button class="buttons--black">.</button>
-    </section>
-    <script type="module" src="/src/main.ts"></script>
+        <button class="buttons__button--black-zero" value="0">0</button>
+        <button class="buttons__button--black" value=".">.</button>
+        <button class="buttons__button--orange" value="=">=</button>
+      </section>
+      <script type="module" src="/src/main.ts"></script>
+    </div>
   </body>
 </html>
