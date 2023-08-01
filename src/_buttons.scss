@@ -1,0 +1,38 @@
+@use "./variables" as *;
+
+.buttons {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  &__button--grey,
+  &__button--black,
+  &__button--orange,
+  &__button--black-zero {
+    color: $primary-color;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 10px;
+    width: 70px;
+    border-radius: 25px;
+    padding: 10px;
+  }
+
+  &__button--grey {
+    background-color: $quaternary-color;
+  }
+
+  &__button--black,
+  &__button--black-zero {
+    background-color: $secondary-color;
+  }
+
+  &__button--orange {
+    background-color: $tertiary-color;
+  }
+
+  &__button--black-zero {
+    width: 165px;
+  }
+}

@@ -1,0 +1,6 @@
+@use "./variables" as *;
+
+header {
+  font-family: $primary-font;
+  padding-bottom: 50px;
+}
