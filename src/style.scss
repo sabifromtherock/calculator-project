@@ -1,5 +1,16 @@
+@use "./variables" as *;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto;
+  color: $primary-color;
+  background-color: $secondary-color;
 }
