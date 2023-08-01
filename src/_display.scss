@@ -6,12 +6,15 @@
   font-family: $secondary-font;
   font-size: 48px;
   border-radius: 20px;
+  height: 114px;
   width: 360px;
   margin-bottom: 30px;
   padding: 10px;
   text-align: end;
+  overflow: hidden;
 
   &__row--first {
+    height: 24px;
     font-size: 0.5em;
   }
 }
