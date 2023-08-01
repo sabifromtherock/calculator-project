@@ -1,0 +1,17 @@
+@use "./variables" as *;
+
+.display {
+  color: $secondary-color;
+  background-color: lightgoldenrodyellow;
+  font-family: $secondary-font;
+  font-size: 48px;
+  border-radius: 20px;
+  width: 360px;
+  margin-bottom: 30px;
+  padding: 10px;
+  text-align: end;
+
+  &__row--first {
+    font-size: 0.5em;
+  }
+}

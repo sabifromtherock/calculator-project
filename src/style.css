@@ -27,6 +27,21 @@
   width: 165px;
 }
 
+.display {
+  color: black;
+  background-color: lightgoldenrodyellow;
+  font-family: "Rampart One";
+  font-size: 48px;
+  border-radius: 20px;
+  width: 360px;
+  margin-bottom: 30px;
+  padding: 10px;
+  text-align: end;
+}
+.display__row--first {
+  font-size: 0.5em;
+}
+
 * {
   margin: 0;
   padding: 0;
