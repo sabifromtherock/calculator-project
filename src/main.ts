@@ -23,8 +23,9 @@ const handleClick = (event: Event) => {
   }
 
   if (targetButton.value === "+/-") {
-    currentValue = -currentValue;
-    displaySecondRow.innerHTML = `${currentValue}`;
+    displaySecondRow.innerHTML = `${
+      Number(displaySecondRow.innerHTML.slice(0, -3)) * -1
+    }`;
   }
 
   if (targetButton.value === "=") {
