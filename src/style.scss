@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100%;
+  background-color: $secondary-color;
+}
+
 .calculator-container {
   display: flex;
   flex-direction: column;
@@ -16,7 +21,6 @@
   margin: auto;
   padding: 50px;
   color: $primary-color;
-  background-color: $secondary-color;
 }
 
 @media screen and (min-width: 768px) {

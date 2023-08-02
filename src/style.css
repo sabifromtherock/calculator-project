@@ -56,6 +56,11 @@ header {
   box-sizing: border-box;
 }
 
+body {
+  height: 100%;
+  background-color: black;
+}
+
 .calculator-container {
   display: flex;
   flex-direction: column;
@@ -63,7 +68,6 @@ header {
   margin: auto;
   padding: 50px;
   color: white;
-  background-color: black;
 }
 
 @media screen and (min-width: 768px) {
