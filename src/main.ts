@@ -1,10 +1,16 @@
 import "./style.scss";
 
-const displayFirstRow = document.querySelector(".display__row--first");
-const displaySecondRow = document.querySelector(".display__row--second");
+const displayFirstRow = document.querySelector(
+  ".display__row--first"
+) as HTMLParagraphElement;
+const displaySecondRow = document.querySelector(
+  ".display__row--second"
+) as HTMLParagraphElement;
 
 if (!displayFirstRow || !displaySecondRow)
   throw new Error("Issue with selector");
+
+let currentValue: number = 0;
 
 const handleClick = (event: Event) => {
   const targetButton = event.currentTarget as HTMLButtonElement;
@@ -17,42 +23,33 @@ const handleClick = (event: Event) => {
   }
 
   if (targetButton.value === "+/-") {
-    displaySecondRow.innerHTML = `${
-      Number(displaySecondRow.innerHTML.slice(0, -3)) * -1
-    }`;
+    currentValue = -currentValue;
+    displaySecondRow.innerHTML = `${currentValue}`;
   }
 
   if (targetButton.value === "=") {
     displayFirstRow.innerHTML = displaySecondRow.innerHTML;
 
     const numbers = displaySecondRow.innerHTML.match(/[0-9.]+/g);
-    const operator = displaySecondRow.innerHTML.match(/[^\d\.]/g);
+    const operators = displaySecondRow.innerHTML.match(/[^\d\.]/g);
 
-    if (!numbers || !operator) {
+    if (!numbers || !operators) {
       throw new Error("Error");
     }
 
-    console.log(operator[0], operator[1]);
+    const numA = Number(numbers[0]);
+    const numB = Number(numbers[1]);
+    const operand = operators[0];
 
-    operator[0] === "+"
-      ? (displaySecondRow.innerHTML = `${
-          Number(numbers[0]) + Number(numbers[1])
-        }`)
-      : operator[0] === "-"
-      ? (displaySecondRow.innerHTML = `${
-          Number(numbers[0]) - Number(numbers[1])
-        }`)
-      : operator[0] === "x"
-      ? (displaySecondRow.innerHTML = `${
-          Number(numbers[0]) * Number(numbers[1])
-        }`)
-      : operator[0] === "/"
-      ? (displaySecondRow.innerHTML = `${
-          Number(numbers[0]) / Number(numbers[1])
-        }`)
-      : (displaySecondRow.innerHTML = `${
-          0.01 * Number(numbers[0]) * Number(numbers[1])
-        }`);
+    operand === "+"
+      ? (displaySecondRow.innerHTML = `${numA + numB}`)
+      : operand === "-"
+      ? (displaySecondRow.innerHTML = `${numA - numB}`)
+      : operand === "x"
+      ? (displaySecondRow.innerHTML = `${numA * numB}`)
+      : operand === "/"
+      ? (displaySecondRow.innerHTML = `${numA / numB}`)
+      : (displaySecondRow.innerHTML = `${0.01 * numA * numB}`);
   }
 };
 
