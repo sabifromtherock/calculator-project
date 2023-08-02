@@ -10,8 +10,6 @@ const displaySecondRow = document.querySelector(
 if (!displayFirstRow || !displaySecondRow)
   throw new Error("Issue with selector");
 
-let currentValue: number = 0;
-
 const handleClick = (event: Event) => {
   const targetButton = event.currentTarget as HTMLButtonElement;
 
