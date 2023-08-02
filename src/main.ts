@@ -23,8 +23,9 @@ const handleClick = (event: Event) => {
   }
 
   if (targetButton.value === "+/-") {
-    currentValue = -currentValue;
-    displaySecondRow.innerHTML = `${currentValue}`;
+    displaySecondRow.innerHTML = `${
+      Number(displaySecondRow.innerHTML.slice(0, -3)) * -1
+    }`;
   }
 
   if (targetButton.value === "=") {
@@ -37,9 +38,16 @@ const handleClick = (event: Event) => {
       throw new Error("Error");
     }
 
-    const numA = Number(numbers[0]);
-    const numB = Number(numbers[1]);
-    const operand = operators[0];
+    let numA = Number(numbers[0]);
+    let numB = Number(numbers[1]);
+    let operand = operators[0];
+
+    if (operators.length > 1) {
+      if (operators[0] === "-") {
+        numA = -numA;
+        operand = operators[1];
+      }
+    }
 
     operand === "+"
       ? (displaySecondRow.innerHTML = `${numA + numB}`)
