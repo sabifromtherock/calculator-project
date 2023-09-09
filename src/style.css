@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.buttons__button--grey, .buttons__button--black, .buttons__button--orange, .buttons__button--black-zero {
+.buttons__button--grey, .buttons__button--orange, .buttons__button--black, .buttons__button--red {
   color: white;
   font-size: 20px;
   font-weight: 900;
@@ -17,13 +17,16 @@
 .buttons__button--grey {
   background-color: grey;
 }
-.buttons__button--black, .buttons__button--black-zero {
+.buttons__button--black {
   background-color: black;
 }
 .buttons__button--orange {
   background-color: orange;
 }
-.buttons__button--black-zero {
+.buttons__button--red {
+  background-color: red;
+}
+.buttons__button--black-zero, .buttons__button--red {
   width: 165px;
 }
 

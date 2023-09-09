@@ -7,9 +7,9 @@
   justify-content: space-evenly;
 
   &__button--grey,
-  &__button--black,
   &__button--orange,
-  &__button--black-zero {
+  &__button--black,
+  &__button--red {
     color: $primary-color;
     font-size: 20px;
     font-weight: 900;
@@ -23,8 +23,7 @@
     background-color: $quaternary-color;
   }
 
-  &__button--black,
-  &__button--black-zero {
+  &__button--black {
     background-color: $secondary-color;
   }
 
@@ -32,7 +31,12 @@
     background-color: $tertiary-color;
   }
 
-  &__button--black-zero {
+  &__button--red {
+    background-color: red;
+  }
+
+  &__button--black-zero,
+  &__button--red {
     width: 165px;
   }
 }

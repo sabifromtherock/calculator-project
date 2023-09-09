@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./public/calculator.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
     <title>Calculator</title>
   </head>
   <body>
@@ -16,8 +17,8 @@
         <p class="display__row--second"></p>
       </section>
       <section class="buttons">
-        <button class="buttons__button--grey" value="C">C</button>
-        <button class="buttons__button--grey" value="+/-">+/-</button>
+        <button class="buttons__button--red" value="C">C</button>
+        <!-- <button class="buttons__button--grey" value="+/-">+/-</button> -->
         <button class="buttons__button--grey" value="%">%</button>
         <button class="buttons__button--orange" value="/">/</button>
 
@@ -36,7 +37,12 @@
         <button class="buttons__button--black" value="3">3</button>
         <button class="buttons__button--orange" value="+">+</button>
 
-        <button class="buttons__button--black-zero" value="0">0</button>
+        <button
+          class="buttons__button--black buttons__button--black-zero"
+          value="0"
+        >
+          0
+        </button>
         <button class="buttons__button--black" value=".">.</button>
         <button class="buttons__button--orange" value="=">=</button>
       </section>
